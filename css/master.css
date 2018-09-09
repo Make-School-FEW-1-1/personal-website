@@ -1,0 +1,22 @@
+.name {
+}
+
+.name>p{
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    margin: 0 0 0 0;
+    font-size: 30px;
+}
+
+.last {
+    color: #464440;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.first {
+    float: left;
+}
+
+body {
+
+}
