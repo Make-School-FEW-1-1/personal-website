@@ -7,25 +7,38 @@ body {
 /* -HEADER */
 header {
     background-color: #FFB246;
+    position: sticky;
+    top: 0;
     padding-top: 32px;
-    padding-bottom: 32px;
+    padding-bottom: 8px;
     margin-top: 0px;
+    height: 80px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
 }
 
-/* -CLASS HEADER ADOPTS AFTER SCROLL */
-.moving-header{
-    position: fixed;
-    top: 0;
-    width: 100%;
+/* --NAVBAR */
+.navbar {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
 }
 
 /* --NAME */
 .name {
-    overflow: visible;
-    width: 1px;
-    margin-left: 85%;
-    margin-top: 0px;
-    margin-bottom: 16px;
+    position: absolute;
+    bottom: 16px;
+    right: 8px;
+    height: inherit;
+    /* display: inline-block;
+    bottom: 8px; */
+    /* width: 1px; */
+    /* margin-right: 32px; */
+    /* margin-left: 70%; */
+    /* margin-top: 0px;
+    margin-bottom: 0px; */
 }
 
 /* ---APPLIES STYLE TO DIVS INSIDE NAME */
@@ -39,8 +52,9 @@ header {
 /* ---GIVES STYLE TO LAST NAME */
 .last {
     color: #464440;
+    position: relative;
+    top:-8px;
     font-weight: bold;
-
 }
 /* ---FIRST NAME BEFORE SCROLL */
 .first {
@@ -65,10 +79,7 @@ header {
     right: 68px;
 }
 
-/* -SMOOTHS TRANSITION TO MOVING HEADER */
-.moving-header + .content {
-    padding-top: 184px;
-}
+
 /* -APPLIES STYLE TO CONTENT */
 .content {
     max-width: 450px;
