@@ -23,22 +23,22 @@ header {
 .navbar {
     position: absolute;
     bottom: 8px;
-    left: 8px;
+    margin-left: 120px;
+}
+
+.navbar > a {
+    text-decoration: none;
+    color: #464440;
+    font-size: 21px;
+    margin: 12px;
 }
 
 /* --NAME */
 .name {
     position: absolute;
     bottom: 16px;
-    right: 8px;
+    right: 120px;
     height: inherit;
-    /* display: inline-block;
-    bottom: 8px; */
-    /* width: 1px; */
-    /* margin-right: 32px; */
-    /* margin-left: 70%; */
-    /* margin-top: 0px;
-    margin-bottom: 0px; */
 }
 
 /* ---APPLIES STYLE TO DIVS INSIDE NAME */
@@ -75,13 +75,53 @@ header {
     top: 30px;
 }
 /* ---CLASS FIRST NAME ADOPTS AFTER SCROLL */
-.nickname{
+.first:hover{
     right: 68px;
 }
 
 
 /* -APPLIES STYLE TO CONTENT */
 .content {
-    max-width: 450px;
+    width: 800px;
     margin: auto;
+    font-size: 21px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+img {
+    border: 2px solid gray;
+    border-radius: 300px;
+    height: 250px;
+}
+
+summary {
+    font-size: 1.5em;
+    width: 600px;
+    overflow: visible;
+    text-align: center;
+}
+
+div > h2 {
+    text-align: center;
+}
+
+.content > div {
+    max-width: 450px;
+    padding: 0px 8px 8px 8px;
+    box-shadow: 0px 0px 5px 3px black;
+    margin: 24px;
+    transition: all 1s;
+}
+
+.content > div:hover {
+    box-shadow: 0px 0px 15px 5px black;
+    transform:scale(1.1);
+}
+
+#contact > ul {
+    list-style: none;
+    padding: 0;
 }
