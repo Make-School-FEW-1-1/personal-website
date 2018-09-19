@@ -4,41 +4,40 @@ body {
  margin: 0px;
 }
 
-/* -HEADER */
-header {
+.header-bg {
+    width: 100%;
     background-color: #FFB246;
     position: sticky;
     top: 0;
-    padding-top: 32px;
-    padding-bottom: 8px;
-    margin-top: 0px;
-    height: 80px;
+}
+/* -HEADER */
+header {
+    margin: auto;
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
+    align-items: flex-end;
+    flex-direction: row;
     justify-content: space-between;
+    padding: 8px;
+    width: 70%;
+    height:70px;
 }
 
 /* --NAVBAR */
 .navbar {
-    position: absolute;
-    bottom: 8px;
-    margin-left: 120px;
 }
 
 .navbar > a {
     text-decoration: none;
     color: #464440;
-    font-size: 21px;
-    margin: 12px;
+    font-size: 20px;
+    margin-right: 16px;
 }
 
 /* --NAME */
 .name {
-    position: absolute;
-    bottom: 16px;
-    right: 120px;
-    height: inherit;
+    height: auto;
 }
 
 /* ---APPLIES STYLE TO DIVS INSIDE NAME */
@@ -47,19 +46,21 @@ header {
     font-size: 30px;
     margin-top: 0px;
     margin-bottom: 0px;
+
 }
 
 /* ---GIVES STYLE TO LAST NAME */
 .last {
     color: #464440;
-    position: relative;
-    top:-8px;
     font-weight: bold;
+    padding: 0;
+    width: 115px;
 }
 /* ---FIRST NAME BEFORE SCROLL */
 .first {
     position: relative;
     right: 140px;
+    top: 8px;
     transition-timing-function: ease;
     transition-duration: .75s;
     color: #fafafa;
@@ -70,9 +71,9 @@ header {
     width: 70px;
     float:left;
     background-color: #FFB246;
-    z-index: 10;
+    z-index: 2;
     position:relative;
-    top: 30px;
+    top: 38px;
 }
 /* ---CLASS FIRST NAME ADOPTS AFTER SCROLL */
 .first:hover{
