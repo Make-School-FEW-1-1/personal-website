@@ -2,13 +2,15 @@
 body {
  background-color: #fafafa;
  margin: 0px;
+ font-family: 'Roboto Condensed', sans-serif;
 }
 
 .header-bg {
     width: 100%;
-    background-color: #FFB246;
+    background-color: #FF8558;
     position: sticky;
     top: 0;
+    z-index: 2;
 }
 /* -HEADER */
 header {
@@ -70,56 +72,83 @@ header {
     height:30px;
     width: 70px;
     float:left;
-    background-color: #FFB246;
-    z-index: 2;
+    background-color: #FF8558;
+    z-index: 3;
     position:relative;
     top: 38px;
 }
+
+
 /* ---CLASS FIRST NAME ADOPTS AFTER SCROLL */
-.first:hover{
+.header-bg:hover .first{
     right: 68px;
+}
+
+.profile-background {
+    background: linear-gradient(#FF8558, #FF8558 70%, #FFB658);
+    min-height: 100vh;
+    display: flex;
+
+}
+
+.profile-container {
+    padding-top: 32px;
+    width: 70%;
+    margin: auto;
+    position: relative;
+    bottom: 86px;
+}
+
+img {
+    /* border: 2px solid gray; */
+    border-radius: 50%;
+    width: 40%;
+    float: left;
+    shape-outside: circle();
+    margin-right: 16px;
+}
+
+summary {
+    font-size: 4em;
+    text-align: left;
+    color: #FFB658;
+    line-height: 1em;
+}
+
+summary > .school {
+    color: #458CBD;
 }
 
 
 /* -APPLIES STYLE TO CONTENT */
 .content {
-    width: 800px;
-    margin: auto;
+    padding-top: 16px;
     font-size: 21px;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background: #FFB658;
 }
 
-img {
-    border: 2px solid gray;
-    border-radius: 300px;
-    height: 250px;
-}
 
-summary {
-    font-size: 1.5em;
-    width: 600px;
-    overflow: visible;
-    text-align: center;
-}
 
 div > h2 {
     text-align: center;
 }
 
 .content > div {
-    max-width: 450px;
+    width: 55%;
+    min-width: 450px;
     padding: 0px 8px 8px 8px;
-    box-shadow: 0px 0px 5px 3px black;
     margin: 24px;
     transition: all 1s;
 }
 
 .content > div:hover {
-    box-shadow: 0px 0px 15px 5px black;
-    transform:scale(1.1);
+    box-shadow: 0px 0px 30px 0px black;
+    transform:scale(1.02);
 }
 
 #contact > ul {
