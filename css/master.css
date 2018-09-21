@@ -79,8 +79,14 @@ header {
 }
 
 
+/* FUTURE: CHECK TO SEE MEDIA TYPE, IF BELOW A CERTAIN SIZE, DONT FLOAT IMAGE 
+
 /* ---CLASS FIRST NAME ADOPTS AFTER SCROLL */
 .header-bg:hover .first{
+    right: 68px;
+}
+
+.content:hover .first{
     right: 68px;
 }
 
