@@ -65,41 +65,40 @@ header {
 
 /* ---GIVES STYLE TO LAST NAME */
 .last {
+    position: relative;
+    right: 0;
     color: #464440;
     font-weight: bold;
     padding: 0;
     width: 115px;
+    transition-timing-function: ease;
+    transition-duration: .75s;
 }
 /* ---FIRST NAME BEFORE SCROLL */
 .first {
-    position: relative;
-    right: 140px;
-    top: 8px;
-    transition-timing-function: ease;
-    transition-duration: .75s;
     color: #fafafa;
 }
 /* ---PARTIALLY HIDES FIRST MAME AFTER SCROLL */
 .mask {
-    height:30px;
-    width: 70px;
-    float:left;
-    background-color: var(--rgba-primary-0);
-    z-index: 3;
-    position:relative;
-    top: 38px;
+    position: relative;
+    right: 140px;
+    top: 8px;
+    width: 141px;
+    overflow: hidden;
+    transition-timing-function: ease;
+    transition-duration: .75s;
 }
-
-
 
 /* ---CLASS FIRST NAME ADOPTS AFTER SCROLL */
-.header-bg:hover .first{
-    right: 68px;
+.header-bg:hover .last{
+    right: 72px;
 }
 
-.content:hover .first{
-    right: 68px;
+.header-bg:hover .mask{
+    width: 69px;
 }
+
+
 
 .profile-background {
     background: linear-gradient(var(--rgba-primary-0), var(--rgba-primary-0) 70%, var(--rgba-secondary-1-0));
