@@ -46,7 +46,8 @@ header {
 }
 
 .navbar > a:hover {
-    font-size: 23px;
+    color: #000000;
+    font-weight: 500;
 }
 
 /* --NAME */
@@ -104,6 +105,7 @@ header {
     background: linear-gradient(var(--rgba-primary-0), var(--rgba-primary-0) 70%, var(--rgba-secondary-1-0));
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
 
 }
 
