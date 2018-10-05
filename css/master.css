@@ -13,7 +13,7 @@ body {
 
 .header-bg {
     width: 100%;
-    background-color: var(--rgba-primary-0);
+    background: linear-gradient(rgba(242, 140, 102, 1), var(--rgba-secondary-1-0));
     position: sticky;
     top: 0;
     z-index: 2;
@@ -91,18 +91,18 @@ header {
 }
 
 /* ---CLASS FIRST NAME ADOPTS AFTER SCROLL */
-.header-bg:hover .last{
+.last.nickname{
     right: 72px;
 }
 
-.header-bg:hover .mask{
+.mask.nickname{
     width: 69px;
 }
 
 
 
 .profile-background {
-    background: linear-gradient(var(--rgba-primary-0), var(--rgba-primary-0) 70%, var(--rgba-secondary-1-0));
+    background: linear-gradient(var(--rgba-primary-0), var(--rgba-primary-0) 70%, rgba(242, 139, 102));
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -115,7 +115,6 @@ header {
     max-width: 500;
     margin: auto;
     position: relative;
-    bottom: 86px;
     font-size: 4vw;
 
 }
@@ -127,7 +126,7 @@ img {
     width: 40%;
     float: right;
     shape-outside: circle();
-    margin-left: 32px;
+    margin-left: 88px;
 }
 
 p {
@@ -141,6 +140,11 @@ p > .school {
     color: #458CBD;
 }
 
+/* SCROLL BUTTON */
+.scroll-button{
+    width: 3em;
+    margin: auto;
+}
 
 /* -APPLIES STYLE TO CONTENT */
 .content {
