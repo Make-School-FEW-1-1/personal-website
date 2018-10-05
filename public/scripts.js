@@ -39,17 +39,20 @@ nodes.forEach((elem) => {
 })
 
 let scrolling = false;
+let profileContainer = document.querySelector(".profile-container");
 // add listener to disable scroll
 window.addEventListener('scroll', (event) => {
-    if (isInViewport(document.querySelector(".profile-container")) && !scrolling) {
+    if (isInViewport(profileContainer) && !scrolling) {
         // window.scroll({
         //     top: 0,
         //     behavior: "smooth"
         // })
         window.scrollTo(0, 0);
     } else {
-        if (window.pageYOffset == 0)
+        if (window.pageYOffset == 0) {
             scrolling = false;
+            profileContainer.style.opacity = '1.0';
+        }
     }
 });
 
@@ -68,8 +71,11 @@ var isInViewport = (elem) => {
 document.querySelector('.scroll-button').addEventListener('click', (event) => {
     console.log("Trying to scroll");
     scrolling = true;
-    window.scroll({
-        top: document.querySelector('#about').offsetTop - document.querySelector('.header-bg').offsetHeight,
-        behavior: "smooth"
-    });
+    profileContainer.style.opacity = "0.0";
+    setTimeout(() => {
+        window.scroll({
+            top: document.querySelector('#about').offsetTop - document.querySelector('.header-bg').offsetHeight,
+            behavior: "smooth"
+        });
+    }, 800)
 })
