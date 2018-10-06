@@ -11,14 +11,88 @@ body {
  font-family: 'Roboto Condensed', sans-serif;
 }
 
+/*    PROFILE     */
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    height: 100vh;
+}
+
+.profile-background {
+    background: linear-gradient(var(--rgba-primary-0), var(--rgba-primary-0) 70%, rgba(242, 139, 102));
+    min-height: 100vh;
+    font-size: 1vw;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between; */
+}
+
+
+
+.name.profile {
+    font-size: 2em;
+    transition: top .5s;
+    position: relative;
+    top: 0px;
+}
+
+.name.shift {
+    position: relative;
+    top: 5em;
+}
+
+.profile-container {
+    padding-top: .25em;
+    width: 70%;
+    max-width: 500;
+    font-size: 4vw;
+    transition: opacity .5s linear;
+}
+
+/* FUTURE: CHECK TO SEE MEDIA TYPE, IF BELOW A CERTAIN SIZE, DONT FLOAT IMAGE */
+img {
+    /* border: 2px solid gray; */
+    border-radius: 50%;
+    width: 40%;
+    float: right;
+    shape-outside: circle();
+    margin-left: 88px;
+}
+
+p {
+    margin-top: 0;
+    text-align: right;
+    color: var(--rgba-secondary-1-0);
+    line-height: 1.1em;
+}
+
+p > .school {
+    color: #458CBD;
+}
+
+/* SCROLL BUTTON */
+.scroll-button{
+    width: 3em;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 16px;
+}
+
+/* -HEADER */
+
 .header-bg {
     width: 100%;
-    background-color: var(--rgba-primary-0);
+    background: linear-gradient(rgba(242, 140, 102, 1), var(--rgba-secondary-1-0));
     position: sticky;
     top: 0;
     z-index: 2;
 }
-/* -HEADER */
 header {
     margin: auto;
     display: -webkit-flex;
@@ -46,7 +120,8 @@ header {
 }
 
 .navbar > a:hover {
-    font-size: 23px;
+    color: #000000;
+    font-weight: 500;
 }
 
 /* --NAME */
@@ -57,7 +132,7 @@ header {
 /* ---APPLIES STYLE TO DIVS INSIDE NAME */
 .name>div{
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    font-size: 30px;
+    font-size: 2em;
     margin-top: 0px;
     margin-bottom: 0px;
 
@@ -70,7 +145,8 @@ header {
     color: #464440;
     font-weight: bold;
     padding: 0;
-    width: 115px;
+    width: 3.7em;
+    /* width: 115px; */
     transition-timing-function: ease;
     transition-duration: .75s;
 }
@@ -81,63 +157,23 @@ header {
 /* ---PARTIALLY HIDES FIRST MAME AFTER SCROLL */
 .mask {
     position: relative;
-    right: 140px;
+    right: 4.5em;
     top: 8px;
-    width: 141px;
+    width: 4.7em;
     overflow: hidden;
     transition-timing-function: ease;
     transition-duration: .71s;
 }
 
 /* ---CLASS FIRST NAME ADOPTS AFTER SCROLL */
-.header-bg:hover .last{
-    right: 72px;
+.last.nickname{
+    right: 2.1em;
 }
 
-.header-bg:hover .mask{
+.mask.nickname{
     width: 2.3em;
 }
 
-
-
-.profile-background {
-    background: linear-gradient(var(--rgba-primary-0), var(--rgba-primary-0) 70%, var(--rgba-secondary-1-0));
-    min-height: 100vh;
-    display: flex;
-
-}
-
-.profile-container {
-    padding-top: 32px;
-    width: 70%;
-    max-width: 500;
-    margin: auto;
-    position: relative;
-    bottom: 86px;
-    font-size: 4vw;
-
-}
-
-/* FUTURE: CHECK TO SEE MEDIA TYPE, IF BELOW A CERTAIN SIZE, DONT FLOAT IMAGE */
-img {
-    /* border: 2px solid gray; */
-    border-radius: 50%;
-    width: 40%;
-    float: right;
-    shape-outside: circle();
-    margin-left: 32px;
-}
-
-p {
-    margin-top: 0;
-    text-align: right;
-    color: var(--rgba-secondary-1-0);
-    line-height: 1.1em;
-}
-
-p > .school {
-    color: #458CBD;
-}
 
 
 /* -APPLIES STYLE TO CONTENT */
@@ -187,12 +223,12 @@ div > h2 {
 
 #contact path {
     fill: rgba(0, 0, 0, 1);
-    transition-duration: 0.8s;
+    transition-duration: 0.6s;
     transition-timing-function: linear;
 }
 
 #contact a:hover path {
-    fill: var(--rgba-complement-2);
+    fill: white;
 }
 
 body {
