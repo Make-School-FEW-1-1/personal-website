@@ -35,7 +35,14 @@ body {
 
 .name.profile {
     font-size: 2em;
-    transition: .5s;
+    transition: top .5s;
+    position: relative;
+    top: 0px;
+}
+
+.name.shift {
+    position: relative;
+    top: 5em;
 }
 
 .profile-container {

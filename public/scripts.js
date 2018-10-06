@@ -53,7 +53,7 @@ window.addEventListener('scroll', (event) => {
         window.scrollTo(0, 0);
     } else {
         if (window.pageYOffset == 0) {
-            document.querySelector(`.landing-container`).appendChild(profileContainer);
+            document.querySelector('.name.profile').classList.remove('shift')
             scrolling = false;
             profileContainer.style.opacity = '1.0';
             lastName.classList.remove("nickname")
@@ -84,7 +84,7 @@ document.querySelector('.scroll-button').addEventListener('click', (event) => {
     scrolling = true;
     profileContainer.style.opacity = "0.0";
     setTimeout(() => {
-        document.querySelector(`.landing-container`).removeChild(profileContainer);
+        document.querySelector('.name.profile').classList.add('shift');
     }, 800)
 
     document.querySelector('.profile > .mask').classList.add('nickname');
@@ -96,5 +96,5 @@ document.querySelector('.scroll-button').addEventListener('click', (event) => {
             top: document.querySelector('#about').offsetTop - document.querySelector('.header-bg').offsetHeight,
             behavior: "smooth"
         });
-    }, 1200)
+    }, 1450)
 })
