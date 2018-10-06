@@ -50,7 +50,7 @@ body {
     width: 70%;
     max-width: 500;
     font-size: 4vw;
-    transition: opacity .8s linear;
+    transition: opacity .5s linear;
 }
 
 /* FUTURE: CHECK TO SEE MEDIA TYPE, IF BELOW A CERTAIN SIZE, DONT FLOAT IMAGE */
@@ -223,12 +223,12 @@ div > h2 {
 
 #contact path {
     fill: rgba(0, 0, 0, 1);
-    transition-duration: 0.8s;
+    transition-duration: 0.6s;
     transition-timing-function: linear;
 }
 
 #contact a:hover path {
-    fill: var(--rgba-complement-2);
+    fill: white;
 }
 
 body {

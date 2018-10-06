@@ -85,10 +85,13 @@ document.querySelector('.scroll-button').addEventListener('click', (event) => {
     profileContainer.style.opacity = "0.0";
     setTimeout(() => {
         document.querySelector('.name.profile').classList.add('shift');
-    }, 800)
+    }, 400)
+    setTimeout(() => {
+        document.querySelector('.profile > .last').classList.add('nickname');
+        document.querySelector('.profile > .mask').classList.add('nickname');
+    }, 1000)
 
-    document.querySelector('.profile > .mask').classList.add('nickname');
-    document.querySelector('.profile > .last').classList.add('nickname');
+
     lastName.classList.add("nickname")
     mask.classList.add("nickname")
     setTimeout(() => {
@@ -96,5 +99,5 @@ document.querySelector('.scroll-button').addEventListener('click', (event) => {
             top: document.querySelector('#about').offsetTop - document.querySelector('.header-bg').offsetHeight,
             behavior: "smooth"
         });
-    }, 1450)
+    }, 1900)
 })
