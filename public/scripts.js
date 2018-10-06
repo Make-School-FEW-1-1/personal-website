@@ -2,18 +2,21 @@
 
 var profile = document.querySelector('.profile-background');
 var offset = profile.offsetHeight;
-var lastName = document.querySelector('.last');
-var mask = document.querySelector('.mask')
-window.onscroll = function() {
-    if (window.pageYOffset > offset) {
-        lastName.classList.add("nickname")
-        mask.classList.add("nickname")
-    } else {
-        lastName.classList.remove("nickname")
-        mask.classList.remove("nickname")
-
-    }
-}
+var lastName = document.querySelector('.header > .last');
+var mask = document.querySelector('.header > .mask')
+// window.onscroll = function() {
+//     if (window.pageYOffset > offset) {
+//         // lastName.classList.add("nickname")
+//         // mask.classList.add("nickname")
+//     } else {
+//         console.log("removing nickname");
+//
+//         lastName.classList.remove("nickname")
+//         mask.classList.remove("nickname")
+//         document.querySelector('.profile > .mask').classList.remove('nickname');
+//         document.querySelector('.profile > .last').classList.remove('nickname');
+//     }
+// }
 
 
 // Attach better click actions to nav buttons
@@ -50,14 +53,21 @@ window.addEventListener('scroll', (event) => {
         window.scrollTo(0, 0);
     } else {
         if (window.pageYOffset == 0) {
+            document.querySelector(`.landing-container`).appendChild(profileContainer);
             scrolling = false;
             profileContainer.style.opacity = '1.0';
+            lastName.classList.remove("nickname")
+            mask.classList.remove("nickname")
+            document.querySelector('.profile > .mask').classList.remove('nickname');
+            document.querySelector('.profile > .last').classList.remove('nickname');
         }
     }
 });
 
 
-var isInViewport = (elem) => {
+// Function to check if a specified element is visible
+
+let isInViewport = (elem) => {
     var bounding = elem.getBoundingClientRect();
 
     return (
@@ -68,14 +78,23 @@ var isInViewport = (elem) => {
     );
 };
 
+// Turns button at bottom of landing to a scroll button
 document.querySelector('.scroll-button').addEventListener('click', (event) => {
     console.log("Trying to scroll");
     scrolling = true;
     profileContainer.style.opacity = "0.0";
     setTimeout(() => {
+        document.querySelector(`.landing-container`).removeChild(profileContainer);
+    }, 800)
+
+    document.querySelector('.profile > .mask').classList.add('nickname');
+    document.querySelector('.profile > .last').classList.add('nickname');
+    lastName.classList.add("nickname")
+    mask.classList.add("nickname")
+    setTimeout(() => {
         window.scroll({
             top: document.querySelector('#about').offsetTop - document.querySelector('.header-bg').offsetHeight,
             behavior: "smooth"
         });
-    }, 800)
+    }, 1200)
 })
