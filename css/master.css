@@ -22,6 +22,8 @@ body {
 }
 
 .profile-background {
+    background: -webkit-linear-gradient(var(--rgba-primary-0), var(--rgba-primary-0) 70%, rgba(242, 139, 102));
+    background: -moz-linear-gradient(var(--rgba-primary-0), var(--rgba-primary-0) 70%, rgba(242, 139, 102));
     background: linear-gradient(var(--rgba-primary-0), var(--rgba-primary-0) 70%, rgba(242, 139, 102));
     min-height: 100vh;
     font-size: 1vw;
