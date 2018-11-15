@@ -21,7 +21,7 @@ var mask = document.querySelector('.header > .mask')
 
 // Attach better click actions to nav buttons
 
-let nodes = document.querySelector('.navbar').childNodes;
+let nodes = document.querySelector('header').childNodes;
 nodes.forEach((elem) => {
     if (elem.nodeName == "A") {
         elem.addEventListener("click", (event) => {
