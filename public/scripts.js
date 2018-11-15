@@ -20,59 +20,34 @@ const mask = document.querySelector('.header > .mask');
 let scrolling = false;
 
 
-let nodes = document.querySelector('.navbar').childNodes;
+const nodes = document.querySelector('.navbar').childNodes;
 nodes.forEach((elem) => {
-    if (elem.nodeName == "A") {
-        elem.addEventListener("click", (event) => {
-            event.preventDefault();
-            let href = elem.getAttribute('href');
-            let target;
-            if (href == '#') {
-                target = 0;
-                scrolling = true;
-            } else
-                target = document.querySelector(href).offsetTop - document.querySelector('.header-bg').offsetHeight;
-            window.scroll({
-                top: target,
-                behavior: "smooth"
-            });
-        })
-    }
-})
-
-document.querySelector('.logo').addEventListener("click", (event) => {
-    event.preventDefault();
-    let target = 0;
-    scrolling = true;
-    window.scroll({
+  if (elem.nodeName === 'A') {
+    elem.addEventListener('click', (event) => {
+      event.preventDefault();
+      const href = elem.getAttribute('href');
+      let target;
+      if (href === '#') {
+        target = 0;
+        scrolling = true;
+      } else target = document.querySelector(href).offsetTop - document.querySelector('.header-bg').offsetHeight;
+      window.scroll({
         top: target,
-        behavior: "smooth"
+        behavior: 'smooth',
+      });
     });
-})
-
-let profileContainer = document.querySelector(".profile-container");
-// add listener to disable scroll
-window.addEventListener('scroll', (event) => {
-    if (isInViewport(profileContainer) && !scrolling) {
-        // window.scroll({
-        //     top: 0,
-        //     behavior: "smooth"
-        // })
-        window.scrollTo(0, 0);
-    } else {
-        if (window.pageYOffset == 0) {
-            document.querySelector('.name.profile').classList.remove('shift')
-            scrolling = false;
-            profileContainer.style.opacity = '1.0';
-            lastName.classList.remove("nickname")
-            mask.classList.remove("nickname")
-            document.querySelector('.profile > .mask').classList.remove('nickname');
-            document.querySelector('.profile > .last').classList.remove('nickname');
-        }
-    }
+  }
 });
 
-// Function to check if a specified element is visible
+document.querySelector('.logo').addEventListener('click', (event) => {
+  event.preventDefault();
+  const target = 0;
+  scrolling = true;
+  window.scroll({
+    top: target,
+    behavior: 'smooth',
+  });
+});
 
 const isInViewport = (elem) => {
   const bounding = elem.getBoundingClientRect();
@@ -95,6 +70,29 @@ window.addEventListener('scroll', (event) => {
     // })
     window.scrollTo(0, 0);
 } else if (window.pageYOffset === 0) {
+    document.querySelector('.name.profile').classList.remove('shift');
+    scrolling = false;
+    profileContainer.style.opacity = '1.0';
+    lastName.classList.remove('nickname');
+    mask.classList.remove('nickname');
+    document.querySelector('.profile > .mask').classList.remove('nickname');
+    document.querySelector('.profile > .last').classList.remove('nickname');
+  }
+});
+
+// Function to check if a specified element is visible
+
+
+
+// add listener to disable scroll
+window.addEventListener('scroll', (event) => {
+  if (isInViewport(profileContainer) && !scrolling) {
+    // window.scroll({
+    //     top: 0,
+    //     behavior: "smooth"
+    // })
+    window.scrollTo(0, 0);
+  } else if (window.pageYOffset === 0) {
     document.querySelector('.name.profile').classList.remove('shift');
     scrolling = false;
     profileContainer.style.opacity = '1.0';
@@ -130,15 +128,15 @@ document.querySelector('.scroll-button').addEventListener('click', (event) => {
 });
 
 window.onload = function onload() { // executes code after DOM loads
-    // --- select all <video> on the page
-    const vids = document.getElementsByTagName('video')
-    // Loop over the selected elements and add event listeners
-    for (let i = 0; i < vids.length; i++) {
-        vids[i].addEventListener('mouseover', function(e) {
-            vids[i].play()
-        })
-        vids[i].addEventListener('mouseout', function(e) {
-            vids[i].pause()
-        })
-    }
-}
+  // --- select all <video> on the page
+  const vids = document.getElementsByTagName('video');
+  // Loop over the selected elements and add event listeners
+  for (let i = 0; i < vids.length; i += 1) {
+    vids[i].addEventListener('mouseover', (e) => {
+      vids[i].play();
+    });
+    vids[i].addEventListener('mouseout', (e) => {
+      vids[i].pause();
+    });
+  }
+};
