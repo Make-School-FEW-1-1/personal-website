@@ -20,8 +20,10 @@ var mask = document.querySelector('.header > .mask')
 
 
 // Attach better click actions to nav buttons
+let scrolling = false;
 
-let nodes = document.querySelector('header').childNodes;
+
+let nodes = document.querySelector('.navbar').childNodes;
 nodes.forEach((elem) => {
     if (elem.nodeName == "A") {
         elem.addEventListener("click", (event) => {
@@ -41,7 +43,16 @@ nodes.forEach((elem) => {
     }
 })
 
-let scrolling = false;
+document.querySelector('.logo').addEventListener("click", (event) => {
+    event.preventDefault();
+    let target = 0;
+    scrolling = true;
+    window.scroll({
+        top: target,
+        behavior: "smooth"
+    });
+})
+
 let profileContainer = document.querySelector(".profile-container");
 // add listener to disable scroll
 window.addEventListener('scroll', (event) => {
@@ -103,15 +114,15 @@ document.querySelector('.scroll-button').addEventListener('click', (event) => {
 })
 
 window.onload = function onload() { // executes code after DOM loads
-// --- select all <video> on the page
-  const vids = document.getElementsByTagName('video')
-  // Loop over the selected elements and add event listeners
-  for (let i = 0; i < vids.length; i++) {
-   vids[i].addEventListener( 'mouseover', function(e) {
-     vids[i].play()
-   })
-   vids[i].addEventListener( 'mouseout', function(e) {
-     vids[i].pause()
-   })
- }
+    // --- select all <video> on the page
+    const vids = document.getElementsByTagName('video')
+    // Loop over the selected elements and add event listeners
+    for (let i = 0; i < vids.length; i++) {
+        vids[i].addEventListener('mouseover', function(e) {
+            vids[i].play()
+        })
+        vids[i].addEventListener('mouseout', function(e) {
+            vids[i].pause()
+        })
+    }
 }
