@@ -1,28 +1,37 @@
 /* GRAYSCALE TOGGLE */
-*{
+* {
     /* -moz-filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%); */
 }
+
 /* STYLES BODY */
 body {
- background-color: #fafafa;
- margin: 0px;
- font-family: 'Roboto Condensed', sans-serif;
+    background-color: #fafafa;
+    margin: 0px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 /*    PROFILE     */
-
 .landing-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     height: 100vh;
 }
 
 .profile-background {
-    background: linear-gradient(var(--rgba-primary-0), var(--rgba-primary-0) 70%, rgba(242, 139, 102));
+    background: rgb(255, 133, 87);
+    /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(255, 133, 87, 1) 0%, rgba(255, 133, 87, 1) 70%, rgba(242, 139, 102, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255, 133, 87, 1) 0%, rgba(255, 133, 87, 1) 70%, rgba(242, 139, 102, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255, 133, 87, 1) 0%, rgba(255, 133, 87, 1) 70%, rgba(242, 139, 102, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8557', endColorstr='#f28b66', GradientType=0);
+    /* IE6-9 */
     min-height: 100vh;
     font-size: 1vw;
     /* display: flex;
@@ -30,8 +39,6 @@ body {
     align-items: center;
     justify-content:space-between; */
 }
-
-
 
 .name.profile {
     font-size: 2em;
@@ -54,7 +61,7 @@ body {
 }
 
 /* FUTURE: CHECK TO SEE MEDIA TYPE, IF BELOW A CERTAIN SIZE, DONT FLOAT IMAGE */
-img {
+.profile-container>img {
     /* border: 2px solid gray; */
     border-radius: 50%;
     width: 40%;
@@ -70,12 +77,12 @@ p {
     line-height: 1.1em;
 }
 
-p > .school {
+p>.school {
     color: #458CBD;
 }
 
 /* SCROLL BUTTON */
-.scroll-button{
+.scroll-button {
     width: 3em;
     margin: auto;
     position: absolute;
@@ -85,14 +92,17 @@ p > .school {
 }
 
 /* -HEADER */
-
 .header-bg {
     width: 100%;
+    background: rgba(242, 140, 102, 1);
+    background: -webkit-linear-gradient(rgba(242, 140, 102, 1), var(--rgba-secondary-1-0));
+    background: -moz-linear-gradient(rgba(242, 140, 102, 1), var(--rgba-secondary-1-0));
     background: linear-gradient(rgba(242, 140, 102, 1), var(--rgba-secondary-1-0));
     position: sticky;
     top: 0;
     z-index: 2;
 }
+
 header {
     margin: auto;
     display: -webkit-flex;
@@ -104,14 +114,13 @@ header {
     padding: 8px;
     width: 70%;
     max-width: 1000px;
-    height:70px;
+    height: 70px;
 }
 
 /* --NAVBAR */
-.navbar {
-}
+.navbar {}
 
-.navbar > a {
+.navbar>a {
     text-decoration: none;
     color: #464440;
     font-size: 20px;
@@ -119,7 +128,7 @@ header {
     transition: .5s;
 }
 
-.navbar > a:hover {
+.navbar>a:hover {
     color: #000000;
     font-weight: 500;
 }
@@ -130,12 +139,11 @@ header {
 }
 
 /* ---APPLIES STYLE TO DIVS INSIDE NAME */
-.name>div{
+.name>div {
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     font-size: 2em;
     margin-top: 0px;
     margin-bottom: 0px;
-
 }
 
 /* ---GIVES STYLE TO LAST NAME */
@@ -150,10 +158,12 @@ header {
     transition-timing-function: ease;
     transition-duration: .75s;
 }
+
 /* ---FIRST NAME BEFORE SCROLL */
 .first {
     color: #fafafa;
 }
+
 /* ---PARTIALLY HIDES FIRST MAME AFTER SCROLL */
 .mask {
     position: relative;
@@ -166,15 +176,13 @@ header {
 }
 
 /* ---CLASS FIRST NAME ADOPTS AFTER SCROLL */
-.last.nickname{
+.last.nickname {
     right: 2.1em;
 }
 
-.mask.nickname{
+.mask.nickname {
     width: 2.3em;
 }
-
-
 
 /* -APPLIES STYLE TO CONTENT */
 .content {
@@ -189,14 +197,13 @@ header {
     line-height: 2em;
 }
 
-
-
-div > h2 {
+div>h2 {
     text-align: center;
-    color: var(--rgba-primary-4;)
+    color: var(--rgba-primary-4;
+    )
 }
 
-.content > div {
+.content>div {
     width: 55%;
     min-width: 450px;
     max-width: 800px;
@@ -206,17 +213,57 @@ div > h2 {
     color: rgba(107, 29, 0, 1);
 }
 
-.content > div:hover {
+.content>div:hover {}
+
+.content a {
+    text-decoration: none;
 }
 
-#contact > ul {
+div.module {
+    height: auto;
+    background: rgba(223, 222, 222, 0.7);
+    text-decoration: none;
+    color: rgb(59, 59, 59);
+    text-align: center;
+    font-size: .8em;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 16px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+div.module>h1 {
+    font-size: 2.0em;
+    margin: 0;
+}
+
+div.module>h2 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+div.module>img {
+    width: 100%;
+}
+
+div.module>p {
+    color: rgb(59, 59, 59);
+    text-align: center;
+    line-height: 1.8em;
+}
+
+#contact>ul {
     list-style: none;
     padding: 0;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
 }
-#contact  a {
+
+#contact a {
     text-decoration: none;
     margin: 0px 32px 0px 32px;
 }
@@ -232,46 +279,55 @@ div > h2 {
 }
 
 body {
-/* ---COLORS--- */
---color-primary-0: #FF8557;	/* Main Primary color */
---color-primary-1: #FFF6F3;
---color-primary-2: #FFB59A;
---color-primary-3: #FF5719;
---color-primary-4: #FF4500;
---color-secondary-1-0: #FFB657;	/* Main Secondary color (1) */
---color-secondary-1-1: #FFFAF3;
---color-secondary-1-2: #FFD39A;
---color-secondary-1-3: #FF9B19;
---color-secondary-1-4: #FF9000;
---color-secondary-2-0: #FB568B;	/* Main Secondary color (2) */
---color-secondary-2-1: #FFF3F7;
---color-secondary-2-2: #FC98B8;
---color-secondary-2-3: #FB1861;
---color-secondary-2-4: #FA0050;
---color-complement-0: #54F4AB;	/* Main Complement color */
---color-complement-1: #F2FEF9;
---color-complement-2: #95F7CA;
---color-complement-3: #18F390;
---color-complement-4: #00F284;
-/* As RGBa codes */
---rgba-primary-0: rgba(255,133, 87,1);	/* Main Primary color */
---rgba-primary-1: rgba(255,246,243,1);
---rgba-primary-2: rgba(255,181,154,1);
---rgba-primary-3: rgba(255, 87, 25,1);
---rgba-primary-4: rgba(255, 69,  0,1);
---rgba-secondary-1-0: rgba(255,182, 87,1);	/* Main Secondary color (1) */
---rgba-secondary-1-1: rgba(255,250,243,1);
---rgba-secondary-1-2: rgba(255,211,154,1);
---rgba-secondary-1-3: rgba(255,155, 25,1);
---rgba-secondary-1-4: rgba(255,144,  0,1);
---rgba-secondary-2-0: rgba(251, 86,139,1);	/* Main Secondary color (2) */
---rgba-secondary-2-1: rgba(255,243,247,1);
---rgba-secondary-2-2: rgba(252,152,184,1);
---rgba-secondary-2-3: rgba(251, 24, 97,1);
---rgba-secondary-2-4: rgba(250,  0, 80,1);
---rgba-complement-0: rgba( 84,244,171,1);	/* Main Complement color */
---rgba-complement-1: rgba(242,254,249,1);
---rgba-complement-2: rgba(149,247,202,1);
---rgba-complement-3: rgba( 24,243,144,1);
---rgba-complement-4: rgba(  0,242,132,1) }
+    /* ---COLORS--- */
+    --color-primary-0: #FF8557;
+    /* Main Primary color */
+    --color-primary-1: #FFF6F3;
+    --color-primary-2: #FFB59A;
+    --color-primary-3: #FF5719;
+    --color-primary-4: #FF4500;
+    --color-secondary-1-0: #FFB657;
+    /* Main Secondary color (1) */
+    --color-secondary-1-1: #FFFAF3;
+    --color-secondary-1-2: #FFD39A;
+    --color-secondary-1-3: #FF9B19;
+    --color-secondary-1-4: #FF9000;
+    --color-secondary-2-0: #FB568B;
+    /* Main Secondary color (2) */
+    --color-secondary-2-1: #FFF3F7;
+    --color-secondary-2-2: #FC98B8;
+    --color-secondary-2-3: #FB1861;
+    --color-secondary-2-4: #FA0050;
+    --color-complement-0: #54F4AB;
+    /* Main Complement color */
+    --color-complement-1: #F2FEF9;
+    --color-complement-2: #95F7CA;
+    --color-complement-3: #18F390;
+    --color-complement-4: #00F284;
+    /* As RGBa codes */
+    --rgba-primary-0: rgba(255, 133, 87, 1);
+    /* Main Primary color */
+    --rgba-primary-1: rgba(255, 246, 243, 1);
+    --rgba-primary-2: rgba(255, 181, 154, 1);
+    --rgba-primary-3: rgba(255, 87, 25, 1);
+    --rgba-primary-4: rgba(255, 69, 0, 1);
+    --rgba-secondary-1-0: rgba(255, 182, 87, 1);
+    /* Main Secondary color (1) */
+    --rgba-secondary-1-1: rgba(255, 250, 243, 1);
+    --rgba-secondary-1-2: rgba(255, 211, 154, 1);
+    --rgba-secondary-1-3: rgba(255, 155, 25, 1);
+    --rgba-secondary-1-4: rgba(255, 144, 0, 1);
+    --rgba-secondary-2-0: rgba(251, 86, 139, 1);
+    /* Main Secondary color (2) */
+    --rgba-secondary-2-1: rgba(255, 243, 247, 1);
+    --rgba-secondary-2-2: rgba(252, 152, 184, 1);
+    --rgba-secondary-2-3: rgba(251, 24, 97, 1);
+    --rgba-secondary-2-4: rgba(250, 0, 80, 1);
+    --rgba-complement-0: rgba(84, 244, 171, 1);
+    /* Main Complement color */
+    --rgba-complement-1: rgba(242, 254, 249, 1);
+    --rgba-complement-2: rgba(149, 247, 202, 1);
+    --rgba-complement-3: rgba(24, 243, 144, 1);
+    --rgba-complement-4: rgba(0, 242, 132, 1)
+}
 }
