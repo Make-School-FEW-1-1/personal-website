@@ -4,7 +4,7 @@ https://keybase.io/severiano
 
 I hereby claim:
 
-  * I am an admin of http://techseve.com
+  * I am an admin of https://seve.dev
   * I am severiano (https://keybase.io/severiano) on keybase.
   * I have a public key with fingerprint 650D A0D4 5AB9 CF15 2038  53AC 30A1 CD8F 46EE E4DD
 
@@ -21,43 +21,56 @@ To do so, I am signing this object:
       "uid": "9d0a32aaf616df4147101ba4a4ebfc19",
       "username": "severiano"
     },
+    "merkle_root": {
+      "ctime": 1576530552,
+      "hash_meta": "813e754d62307a21bf90bb71fce7cf63068b0ba53ad7b5487cd375917223de1c",
+      "seqno": 13666265
+    },
+    "revoke": {
+      "sig_ids": [
+        "e41b81a073242b0e5b24257f590112db977488ca429c7ead43a866bf44c9e1530f"
+      ]
+    },
     "service": {
-      "hostname": "techseve.com",
-      "protocol": "http:"
+      "hostname": "seve.dev",
+      "protocol": "https:"
     },
     "type": "web_service_binding",
     "version": 1
   },
-  "ctime": 1551057200,
+  "ctime": 1576530554,
   "expire_in": 157680000,
-  "prev": "4ef3f4da6c3fcdafa835ec372f808b6f1103e80f639190c9f285d25933de3677",
-  "seqno": 3,
+  "prev": "ea4b7ff2b21bb2788212d2207be80d93615ba5473a432051e8b31376997c49aa",
+  "seqno": 24,
   "tag": "signature"
 }
 
 which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v2.1.0
+Version: Keybase OpenPGP v2.1.3
 Comment: https://keybase.io/crypto
 
-yMIkAnicrZJ9aE5RHMefYWvmJQ0JxXa9FcM5995zX56VTCukEcXIy9O55+XZNe69
-z733eXhsY8qItFiYP/aH5mW0GrM/RAipEUpE3qPkD2ve5q0Uzl38509/nX7nfL7f
-3+/761wfNjBWkOP1/Vi8qjWzLufW1eZ0bE1QBmoky6VZKV4jVbP+g22gLAgT1TaV
-4hKAAHIDUmqp1AIUEsgBNzVZ1onOCIcagrKmUYB1ZBCiAwAsSGWq6wwRbDKmIQIB
-lkokbjtJ5nu+7YTCVkOAYkBVhC1TuCAZKAZSMFEAhoQaXNUYYyqlQljlBpFCDGfh
-gM2yXXEnikT/eP/g//Pc6X47U5CKjDHXoEa5ClVd+FtYxSqzOIFmBAbMd/BGJuiA
-ZZhvY8eV6kpE4WdswqLNRlH+ICEjVRE2i7gbhdjz3dAl7gbxUhWGXjwShlkvIjcx
-K/HHI2HZDhV7FALRILBdR4pDQZLQjkwhQhAgXQagRGKbPdtnCTsikK4ZIiCI2rCM
-sFQZV7hKsUYUTijm2FAQI4oucwMYlsYhBAozANcUE5qAmFw2EJWRqSiUKZquS1Gq
-lIgXV8SYOBlFtpMODtM+k+quXVkzKJZTEMvLHRD9r1jB4BF/f9280vzYNX/Xvh2f
-Uye0n7czRzpuBHc6xhxO3xl98WwrOr7llnvoAcGNPVxrr65YcXF8bXF56ruzZ/sk
-Vtk5t3HXmVf5QXGdcXz6+4P78zrWr0j3FLatNt5ebp5A6hs6yyZXTNla9Gv0qZWV
-x4q6nz3KnL4xqmFnZ1n507G9wxbnze4evPfygZY22LT8xUNQ5w1/8CQ7ZPNbu+no
-0Ov1939lq3tvPv987lzF1OnTLnztOfRtUPPad/eWDpmQt602d1zXojELc/piM44V
-nZ+j776QLCoPvUtvfs58Nb+ppX3J1gUvCvOl5vs1vZmTqQ9dR0e2vXw4cRn69MV/
-Xb/sceFHd3Zj19q7+xqc0tyW3/+NQzQ=
-=ifuJ
+yMK2AnicrZNtiBVVGMfvdddstxezUoIgZHK/xGLnnDkvM5cQ+qBggfZupu7tvDxz
+d7i7M3dn5t7dVe+qRERF30pQiMqojfAFS1hQEttWK9yFMJcCM2TZwNRC2sqstM5s
+RRF97NNhHv7P//k/vzNn7IaWQnuxNvPLqrW7Gl3F46NZvbDh0ncbNzkqNoNOaZNT
+hdkDegykWbkaGqfkIIxw4GFjFDUKGaxxgAKfEyK0AB1gzjDh3CApmKe1QAgpbIgR
+ApiWPgBnGiPpdDpBGFUgqSVhlFlbzpCRyFAmlW9dGEGux1ypXSSxNl5AOQBQY2xj
+d5zmHTackiksDWNbsx/l2Xj/of+fc9dn7XyrdImUAcfcBBRTYf2VpJKCCjT2c2EK
+SSR7wapTaEASyih2mp1OLyTVHigncZzldHUW5hrMBGcuYozYDWXaXe6FTNpWD7sg
+GDWcuEhIglXgI6UEDjQIHXAXcU8hJS0rIxSjntDGFczHghDXANY2SAp9dnIJu5xz
+wpmNkEAjrkI+PQ0rFlzqlNY5QLHysETCJZQoBEzZk4mA+QhjYpQvBPU8LSnxLTJp
+qCs9zlVAqfYB2+yBs6GZT0saoZ41z2/qHwSWGmjYOLUkzmId99hqd5bV0lIOJRus
+5bJ+UOU/DcoqjIz9R2yHhZeGcWRXsMp/86KdDgzUwgTKYfRH2bOXh/I5dlzJAUmV
+CAKiLDtFhOcRuwwhSCjwkPFdjpnFR4UrqUsQw+ApF7uC+77Q1Jfyb4DEjspkJd8m
+rEQyqyfgNEePrG8tFNsL18ydkz+eQnvbTX89qXRs3tXFrVPPjouJdWtOXi1Wn/y4
+FZ0c2LE3Gnpg+a2XHrz/qfev3TX88K/n3vxp8b3mkzX3Xfmt0vXy1OWPhtffOXRh
+4PBDxbF5O4/fUl/5yoobF3y9fdvYzP5vnimohZfZ4Hs/TCQHthw9RZon7t7y7TsH
+nn50a/8dk9+PL1r+1W3X3by6Osr7Nrapu6bPv7Zi/vRM24nThx5fO4LeivT58f3w
+xt7Pzy5Zdfu7pxZsy34u7154xpx76cdDhwcn76lvPTPetXr3zv7yE30XvuBTi6Yv
+Dj/njyx7/tiRZPPpx3Z8VmqO7FlZ/ODFzXsOHhvafv3rafblHOfTt1nHviUtEy0d
+tbOvNiY7Htl3xTnasiz98OILc38HveSLKg==
+=T+H/
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
@@ -66,4 +79,3 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/severiano
 
 ==================================================================
-
